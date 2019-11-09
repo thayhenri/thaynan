@@ -1,0 +1,53 @@
+create table usuarios (
+id serial primary key,
+nome text not null ,
+cpf_cpnj varchar (14) not null,
+empresa text not null,
+telefone varchar (11),
+email varchar (100) not null,
+senha varchar (8) not null,
+foto varchar, );
+
+create table curriculo (
+id serial,
+id pessoa,
+dat_nasc date not null,
+sexo char(1) not null,
+mun_est varchar (50) not null,
+cep varchar (8) not null,
+rua varchar (100) not null,
+numero varchar (5) not null,
+bairro varchar (20) not null,
+curso_1 varchar (50),
+curso_2 varchar (50),
+curso_3 varchar (50),
+curso_4 varchar (50),
+curso_5 varchar (50),
+exp_1 varchar (50),
+exp_2 varchar (50),
+exp_3 varchar (50),
+exp_4 varchar (50),
+exp_5 varchar (50),
+ens_fund char(1),
+ens_med char(1),
+ens_sup char(1),
+sup_esp text,
+quest_1 text not null,
+quest_2 char(1),
+quest_3 char(1),
+quest_4 text not null,
+quest_5 text not null);
+
+creat table vagas (
+id serial,
+nome varchar (100)
+descricao varchar (100),
+id_empresa int,
+ativo varchar,
+data date,);
+
+creat table vaga_curriculo (
+id_vaga int,
+id_candidato int,
+data date,);
+
